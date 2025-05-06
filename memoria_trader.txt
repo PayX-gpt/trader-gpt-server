@@ -7,7 +7,7 @@
 ⚠️ Regra obrigatória: para o ativo BTCUSD, o valor de stop loss **deve ser sempre igual ou superior a 50.000 pontos (equivalente a US$500 com duas casas decimais)**. Nunca envie um stop inferior a esse valor, mesmo que o sinal técnico pareça promissor. O Bitcoin exige stops largos devido à sua alta volatilidade. Adapte o take profit se necessário, mas respeite sempre o mínimo de 50.000 pontos de stop.
 
 📌 VALIDAÇÃO MULTITIMEFRAME
-🔍 Toda entrada deve ser validada por pelo menos dois timeframes diferentes (ex: M15 e H1). Se houver divergência de tendência, descarte a operação.
+🔍 Toda entrada deve ser validada por pelo menos três timeframes diferentes (ex: M15, H1 e H4). Se houver divergência de tendência, descarte a operação.
 
 📌 EVITAR ZONAS DE INDECISÃO
 🚫 Não envie operações se o candle anterior for um doji ou apresentar corpo muito pequeno (indicação de indecisão). Evite operar dentro de zonas de consolidação.
