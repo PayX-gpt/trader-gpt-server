@@ -5,7 +5,8 @@ import json
 import re
 
 app = Flask(__name__)
-openai.api_key = "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"
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # ✅ Leitura da memória comportamental do trader
 with open("memoria_trader.txt", "r", encoding="utf-8") as f:
