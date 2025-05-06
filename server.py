@@ -42,7 +42,7 @@ Sempre analise os candles brutos de forma hierárquica. A estrutura maior preval
    - Probabilidade ≥ 56%
    - Contexto de mercado estiver favorável
    - Entrada estiver em confluência com timeframes maiores
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre igual ou maior que 200 pontos. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📌 VALIDAÇÃO DO PADRÃO TÉCNICO (OBRIGATÓRIA):
@@ -194,7 +194,7 @@ Antes de validar qualquer entrada, aplique a seguinte verificação:
 👉 Exemplo BTC/USD OHLC válido:
 Entrada: 94000, Stop: 93436 — Diferença = 564
 ❌ Se for menor que isso, recuse a entrada
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre igual ou maior que 200 pontos. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ⚠️ Use subtração direta: |entrada − stop| ≥ valor mínimo do ativo. Ou se for o sinal inverso, faca a inversão
 
 ❗ Se a diferença for menor que o exigido, **a entrada deve ser recusada automaticamente**. Essa regra é **prioritária** e **não pode ser ignorada em hipótese alguma.
@@ -220,12 +220,12 @@ Se algum item estiver ausente → **Recuse a entrada.**
 - NÃO use ordens pendentes, pullbacks futuros ou intuição.  
 - Calcule os níveis exatos de **entrada**, **stop** e **gain** no momento da análise.
 - Utilize tops e ganis técnicos, onde o stop a cada 0.01 lote seja maior do que 1,5 usd
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre igual ou maior que 200 pontos. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📈 FORMATO DA RESPOSTA (OBRIGATÓRIO — JSON LIMPO):
 
-Se houver entrada:
+Se houver entrada Válida:
 {
   "setup": 1 ou 2,
   "entrada": 1.23456,
@@ -234,9 +234,16 @@ Se houver entrada:
   "probabilidade": 62
 }
 
-
+Se não houver entrada Válida:
+{
+  "setup": SEM ENTRADA VÁLIDA,
+  "entrada": 1.23456,
+  "stop": 1.22890,
+  "gain": 1.24120,
+  "probabilidade": 62
+}
 ---
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre igual ou maior que 200 pontos. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 
 🎯 Regras finais:
 - NÃO explique. NÃO escreva fora do JSON. NÃO adicione comentários.
@@ -244,7 +251,7 @@ Se houver entrada:
 - NÃO use strings no campo "setup". Use **apenas número**: `1` para Compra, `2` para Venda.
 - A entrada sempre será executada **a mercado**, usando o último candle do timeframe M15 como base.
 - Pense como um trader institucional com precisão matemática.
-
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 DADOS:
 {dados}
 """
