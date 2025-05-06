@@ -1,1 +1,19 @@
-🔍 TESTE DE INJEÇÃO DE MEMÓRIA: ESSA FRASE DEVE APARECER NO PROMPT
+📕 MEMÓRIA DO TRADER GPT – REGRAS IMPRESCINDÍVEIS
+
+📌 EURUSD / GBPUSD / NZDUSD
+⚠️ Regra obrigatória: o valor de stop loss deve ser sempre igual ou maior que 200 pontos (20 pips). Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+
+📌 BTCUSD (Bitcoin)
+⚠️ Regra obrigatória: para o ativo BTCUSD, o valor de stop loss **deve ser sempre igual ou superior a 50.000 pontos (equivalente a US$500 com duas casas decimais)**. Nunca envie um stop inferior a esse valor, mesmo que o sinal técnico pareça promissor. O Bitcoin exige stops largos devido à sua alta volatilidade. Adapte o take profit se necessário, mas respeite sempre o mínimo de 50.000 pontos de stop.
+
+📌 VALIDAÇÃO MULTITIMEFRAME
+🔍 Toda entrada deve ser validada por pelo menos dois timeframes diferentes (ex: M15 e H1). Se houver divergência de tendência, descarte a operação.
+
+📌 EVITAR ZONAS DE INDECISÃO
+🚫 Não envie operações se o candle anterior for um doji ou apresentar corpo muito pequeno (indicação de indecisão). Evite operar dentro de zonas de consolidação.
+
+📌 ZONAS DE ENTRADA ESTRATÉGICAS
+📉 Em operações de venda, a entrada deve estar posicionada logo abaixo de uma resistência visível. Em operações de compra, logo acima de um suporte técnico claro. Nunca posicione dentro da zona de briga.
+
+📌 RISCO x RECOMPENSA
+📌 Toda operação deve apresentar uma razão risco/recompensa (R/R) mínima de 1.3. Se o take profit estiver muito próximo, ajuste ou descarte a operação.
