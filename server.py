@@ -42,7 +42,8 @@ Sempre analise os candles brutos de forma hierárquica. A estrutura maior preval
    - Probabilidade ≥ 56%
    - Contexto de mercado estiver favorável
    - Entrada estiver em confluência com timeframes maiores
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📌 VALIDAÇÃO DO PADRÃO TÉCNICO (OBRIGATÓRIA):
@@ -220,7 +221,8 @@ Se algum item estiver ausente → **Recuse a entrada.**
 - NÃO use ordens pendentes, pullbacks futuros ou intuição.  
 - Calcule os níveis exatos de **entrada**, **stop** e **gain** no momento da análise.
 - Utilize tops e ganis técnicos, onde o stop a cada 0.01 lote seja maior do que 1,5 usd
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📈 FORMATO DA RESPOSTA (OBRIGATÓRIO — JSON LIMPO):
@@ -243,7 +245,9 @@ Se não houver entrada Válida:
   "probabilidade": 62
 }
 ---
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+---
 
 🎯 Regras finais:
 - NÃO explique. NÃO escreva fora do JSON. NÃO adicione comentários.
@@ -251,7 +255,8 @@ Se não houver entrada Válida:
 - NÃO use strings no campo "setup". Use **apenas número**: `1` para Compra, `2` para Venda.
 - A entrada sempre será executada **a mercado**, usando o último candle do timeframe M15 como base.
 - Pense como um trader institucional com precisão matemática.
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
+Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 DADOS:
 {dados}
 """
