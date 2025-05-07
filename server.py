@@ -46,6 +46,28 @@ Antes de validar qualquer entrada, aplique os cálculos abaixo com base no valor
 
 ---
 
+📌 POSICIONAMENTO TÉCNICO DO STOP E GAIN (OBRIGATÓRIO)
+
+O nível de stop loss e take profit deve ser baseado nas **zonas de briga visíveis no timeframe H1**:
+
+• Para operações de **compra**:
+  - O **stop** deve ser posicionado **abaixo da zona de suporte mais tocada** nas últimas 30 velas do H1.
+  - O **gain** deve estar **acima da próxima resistência relevante** que teve múltiplos toques.
+
+• Para operações de **venda**:
+  - O **stop** deve ser posicionado **acima da zona de resistência mais tocada** no H1.
+  - O **gain** deve estar **abaixo do suporte mais próximo validado por múltiplos toques**.
+
+Regras para identificar zonas de briga:
+• A zona é considerada válida se teve **pelo menos 2 ou 3 toques com rejeição clara**.
+• Utilize tolerância de até **±0.1% do preço** para considerar níveis equivalentes.
+• O stop deve sempre respeitar a zona mais segura e **não pode ficar dentro da zona de briga**.
+• O gain deve visar a próxima zona de liquidez clara fora da região atual.
+
+⚠️ Se não houver zonas claras nos dados do H1, **recuse a entrada por falta de suporte técnico**.
+
+---
+
 🔎 CHECKLIST DE VALIDAÇÃO DA ENTRADA
 
 Só valide a entrada se TUDO abaixo for verdadeiro:
