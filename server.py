@@ -42,8 +42,6 @@ Sempre analise os candles brutos de forma hierárquica. A estrutura maior preval
    - Probabilidade ≥ 56%
    - Contexto de mercado estiver favorável
    - Entrada estiver em confluência com timeframes maiores
-⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
-Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📌 VALIDAÇÃO DO PADRÃO TÉCNICO (OBRIGATÓRIA):
@@ -95,6 +93,32 @@ Use cálculos matemáticos para simular visualmente o candle:
 • Corpo = |close - open|  
 • Sombra superior = |high - max(open, close)|  
 • Sombra inferior = |min(open, close) - low|
+
+📌 REGRA FUNDAMENTAL DE DISTÂNCIA MÍNIMA ENTRE ENTRADA, STOP E GAIN (OBRIGATÓRIA)
+
+Antes de validar qualquer entrada, calcule e verifique se os níveis de stop loss e take profit respeitam os valores mínimos exigidos com base percentual, aplicando a lógica abaixo:
+
+📉 CÁLCULO DO STOP MÍNIMO:
+→ A diferença entre o preço de **entrada** e o **stop loss** deve ser de pelo menos **0.25% do valor da entrada**.
+Exemplos:
+• Se for uma **compra**: stop = entrada - (entrada × 0.0025)
+• Se for uma **venda**: stop = entrada + (entrada × 0.0025)
+
+📈 CÁLCULO DO GAIN MÍNIMO:
+→ A diferença entre o preço de **entrada** e o **take profit (gain)** deve ser de pelo menos **0.32% do valor da entrada**.
+Exemplos:
+• Se for uma **compra**: gain = entrada + (entrada × 0.0032)
+• Se for uma **venda**: gain = entrada - (entrada × 0.0032)
+
+⚠️ Se a diferença calculada entre entrada e stop for **menor que 0.25%**, ou a diferença entre entrada e gain for **menor que 0.32%**, a entrada deve ser **recusada automaticamente**.
+
+💡 Dica:
+• Use subtração absoluta apenas para validar (ex: |entrada − stop| ≥ entrada × 0.0025)
+• A entrada e os níveis de SL e TP devem ser **matematicamente consistentes**
+• NÃO arredonde para cima ou para baixo. Use o valor exato do cálculo.
+• Essa regra **se sobrepõe a qualquer sinal técnico**. Se o stop ou gain forem curtos, **recuse a entrada.**
+
+❗ Esta é uma regra de segurança obrigatória e inegociável.
 
 Valide os padrões com base em proporções:
 
@@ -184,22 +208,31 @@ Valide os padrões com base em proporções:
 • Se ATR estiver alto e o mercado errático, reduza o peso do sinal técnico
 
 ---
-📌 REGRA FUNDAMENTAL: STOP LOSS MÍNIMO POR ATIVO (OBRIGATÓRIO)
-Antes de validar qualquer entrada, aplique a seguinte verificação:
+📌 REGRA FUNDAMENTAL DE DISTÂNCIA MÍNIMA ENTRE ENTRADA, STOP E GAIN (OBRIGATÓRIA)
 
-• EUR/USD: o stop deve ser ≥ 0.0017
-• GBP/USD: o stop deve ser ≥ 0.00199
-• BTC/USD: o stop deve ser ≥ 564.0
-• XAU/USD: o stop deve ser ≥ 9.999
+Antes de validar qualquer entrada, calcule e verifique se os níveis de stop loss e take profit respeitam os valores mínimos exigidos com base percentual, aplicando a lógica abaixo:
 
-👉 Exemplo BTC/USD OHLC válido:
-Entrada: 94000, Stop: 93436 — Diferença = 564
-❌ Se for menor que isso, recuse a entrada
-⚠️ Regra obrigatória: o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
-⚠️ Use subtração direta: |entrada − stop| ≥ valor mínimo do ativo. Ou se for o sinal inverso, faca a inversão
+📉 CÁLCULO DO STOP MÍNIMO:
+→ A diferença entre o preço de **entrada** e o **stop loss** deve ser de pelo menos **0.25% do valor da entrada**.
+Exemplos:
+• Se for uma **compra**: stop = entrada - (entrada × 0.0025)
+• Se for uma **venda**: stop = entrada + (entrada × 0.0025)
 
-❗ Se a diferença for menor que o exigido, **a entrada deve ser recusada automaticamente**. Essa regra é **prioritária** e **não pode ser ignorada em hipótese alguma.
-⚠️ Se o stop estiver menor que esses valores, **recuse a entrada**.
+📈 CÁLCULO DO GAIN MÍNIMO:
+→ A diferença entre o preço de **entrada** e o **take profit (gain)** deve ser de pelo menos **0.32% do valor da entrada**.
+Exemplos:
+• Se for uma **compra**: gain = entrada + (entrada × 0.0032)
+• Se for uma **venda**: gain = entrada - (entrada × 0.0032)
+
+⚠️ Se a diferença calculada entre entrada e stop for **menor que 0.25%**, ou a diferença entre entrada e gain for **menor que 0.32%**, a entrada deve ser **recusada automaticamente**.
+
+💡 Dica:
+• Use subtração absoluta apenas para validar (ex: |entrada − stop| ≥ entrada × 0.0025)
+• A entrada e os níveis de SL e TP devem ser **matematicamente consistentes**
+• NÃO arredonde para cima ou para baixo. Use o valor exato do cálculo.
+• Essa regra **se sobrepõe a qualquer sinal técnico**. Se o stop ou gain forem curtos, **recuse a entrada.**
+
+❗ Esta é uma regra de segurança obrigatória e inegociável.
 
 📦 CHECKLIST FINAL DE VALIDAÇÃO:
 
@@ -221,8 +254,6 @@ Se algum item estiver ausente → **Recuse a entrada.**
 - NÃO use ordens pendentes, pullbacks futuros ou intuição.  
 - Calcule os níveis exatos de **entrada**, **stop** e **gain** no momento da análise.
 - Utilize tops e ganis técnicos, onde o stop a cada 0.01 lote seja maior do que 1,5 usd
-⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
-Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 ---
 
 📈 FORMATO DA RESPOSTA (OBRIGATÓRIO — JSON LIMPO):
@@ -245,9 +276,6 @@ Se não houver entrada Válida:
   "probabilidade": 62
 }
 ---
-⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
-Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
----
 
 🎯 Regras finais:
 - NÃO explique. NÃO escreva fora do JSON. NÃO adicione comentários.
@@ -255,8 +283,6 @@ Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 50
 - NÃO use strings no campo "setup". Use **apenas número**: `1` para Compra, `2` para Venda.
 - A entrada sempre será executada **a mercado**, usando o último candle do timeframe M15 como base.
 - Pense como um trader institucional com precisão matemática.
-⚠️ Regra obrigatória: Para open vela m1 menor que 10 o valor de stop loss deve ser sempre maior que 200 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
-Para open vela m1 maior que 10 o valor de stop loss deve ser sempre maior que 500 PIPS. Nunca retorne um stop menor do que isso, mesmo que o padrão técnico pareça curto. Adapte o stop para respeitar esse limite mínimo.
 DADOS:
 {dados}
 """
