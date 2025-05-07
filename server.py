@@ -65,163 +65,159 @@ Só valide a entrada se TUDO abaixo for verdadeiro:
 ---
 
 
-🎯 ESTRATÉGIAS TÉCNICAS (REGRAS MATEMÁTICAS + TAXA BASE)
+📊 ESTRATÉGIAS DE PRICE ACTION PURO — 20 PADRÕES COM VALIDAÇÃO MATEMÁTICA
 
-Use apenas os candles fornecidos (OHLC) para detectar os padrões abaixo. A validação deve ser 100% matemática e seguir as definições exatas.
+Utilize apenas os dados OHLC dos timeframes D1, H4, H1 e M15 para identificar os padrões abaixo.
+Nunca use intuição visual. Use regras matemáticas com base em proporção e repetição.
 
-Cada padrão possui uma taxa de acerto base. Ajuste a probabilidade final conforme contexto de mercado (volume, tendência, confluência entre timeframes).
-
-⸻
-
-1. Pin Bar em Suporte/Resistência — 65%
-• Corpo < 30% do range total
-• Sombra (superior ou inferior) ≥ 2× corpo
-• Ocorre após rejeição em zona de suporte ou resistência com múltiplos toques (mín. 3 candles anteriores)
+Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 
 ⸻
 
-2. Engolfo de Alta/Baixa após Pullback — 60%
-• Corpo do candle atual engole completamente o corpo do anterior
-• Direção contrária à do candle anterior
-• Ideal após retração de 1 a 3 candles contra a tendência
+1. Rejeição Tripla em Suporte com Pin Bar (≈65%)
+
+• 3 toques no mesmo nível (±0.1%)
+• Candle com sombra inferior ≥ 2× corpo e fechamento acima da metade
 
 ⸻
 
-3. Martelo ou Inverted Hammer em Tendência — 58%
-• Corpo pequeno (< 30% do range total)
-• Uma sombra longa (≥ 2× corpo), com a outra pequena ou ausente
-• Contexto de tendência prévia (mín. 3 candles)
+2. Rejeição Tripla em Resistência com Engolfo de Baixa (≈63%)
+
+• 3 toques no topo (±0.1%)
+• Candle engolfa o anterior com corpo claro de baixa
 
 ⸻
 
-4. Doji com Volume em Nível-Chave — 55%
-• Corpo ≈ 0 (|open − close| muito pequeno)
-• Sombra superior e inferior presentes
-• Volume crescente, ou doji aparece após compressão com breakout
+3. Falsa Quebra de Resistência com Reversão (≈62%)
+
+• Rompe topo anterior, mas fecha abaixo do nível
+• Sombra superior longa
 
 ⸻
 
-5. Triângulo Ascendente/Descendente com Breakout — 62%
-• Suporte ou resistência horizontal + outra linha convergente
-• Mín. 3 toques em cada linha
-• Candle de rompimento com corpo ≥ 60% do range total + volume elevado
+4. Falsa Quebra de Suporte com Reversão (≈61%)
+
+• Rompe fundo anterior, mas fecha acima
+• Sombra inferior longa
 
 ⸻
 
-6. Bandeira de Alta/Baixa com Continuação — 60%
-• Movimento explosivo anterior (mín. 3 candles fortes)
-• Seguido de canal estreito com leve inclinação oposta
-• Rompimento com corpo ≥ 50% da bandeira
+5. Engolfo de Reversão Após 3 Candles Direcionais (≈58%)
+
+• 3 candles de mesma direção
+• Candle seguinte engolfa no sentido oposto
 
 ⸻
 
-7. OCO ou OCO Invertido em Topos/Fundos — 65%
-• Três picos ou vales: o do meio mais alto/baixo que os laterais
-• Linha de pescoço bem definida (horizontal ou inclinada)
-• Rompimento com candle de corpo forte (≥ 60% do range)
+6. Inside Bar em Zona Chave (≈57%)
+
+• Candle interno totalmente dentro do anterior
+• Próximo candle rompe a barra-mãe
 
 ⸻
 
-8. Divergência RSI com Reversão Confirmada — 57%
-• Preço forma novo topo/fundo
-• RSI não confirma (divergência)
-• Confirmação com candle técnico (engolfo, martelo, etc.)
+7. Falso Rompimento de Inside Bar (≈59%)
+
+• Rompe a barra-mãe para um lado, mas fecha no lado oposto com força
 
 ⸻
 
-9. Breakout de Consolidação com Volume Acima da Média — 63%
-• Range lateral estável (máx. 3% de oscilação)
-• Candle de rompimento com:
-	•	Corpo ≥ 50% do range
-	•	Volume ≥ 2× média dos 3 candles anteriores
+8. Retração de 50% com Confirmação Técnica (≈60%)
+
+• Candle de impulso
+• Próximo candle retrai até 50% do corpo e forma Pin Bar ou Engolfo
 
 ⸻
 
-10. Retração de Fibonacci 61.8% com Confirmação — 59%
-• Preço retrai até zona de 61.8% (calculada sobre movimento anterior)
-• Confirmação com candle técnico na zona (pin bar, engolfo, etc.)
+9. Consolidação Estreita com Rompimento (≈63%)
+
+• 3–6 candles pequenos com máximas e mínimas similares
+• Rompimento com candle de corpo ≥ 60% do range
 
 ⸻
 
-11. Cruzamento de Médias Móveis (MA50/MA200) com Volume — 60%
-• MA50 cruza MA200 com inclinação positiva (compra) ou negativa (venda)
-• Candle técnico se forma logo após o cruzamento
-• Volume crescente reforça a direção
+10. Topo Duplo com Rejeição (≈64%)
+
+• 2 toques no mesmo topo com rejeição (sombra longa ou engolfo de baixa)
 
 ⸻
 
-12. Bollinger Bands com Reversão + Volume — 58%
-• Preço toca ou ultrapassa banda superior/inferior
-• Candle de reversão com sombra longa e fechamento dentro das bandas
-• Volume alto ou divergência de força
+11. Fundo Duplo com Rejeição (≈64%)
+
+• 2 toques no mesmo fundo com candle de rejeição (Pin Bar ou Engolfo de Alta)
 
 ⸻
 
-13. ADX acima de 25 com Confirmação de Tendência — 61%
-• ADX > 25 indicando força direcional
-• Entrada ocorre a favor da tendência, com candle forte de confirmação (marubozu ou engolfo)
+12. Candle Direcional Após Compressão (≈62%)
+
+• 3 candles com range pequeno
+• Próximo candle tem range 2x maior e direção clara
 
 ⸻
 
-14. MACD com Cruzamento e Histograma Crescente — 59%
-• Linhas MACD se cruzam na direção da tendência
-• Histograma mostra 2 ou mais candles de crescimento
-• Candle de entrada técnico (engolfo, marubozu)
+13. Sequência de Mínimas Mais Altas (≈60%)
+
+• 3 candles consecutivos com mínimas ascendentes
+• Confirmação com candle de força (corpo ≥ 70%)
 
 ⸻
 
-15. Estocástico com Divergência + Candle Técnico — 56%
-• Estocástico marca sobrecompra/sobrevenda
-• Divergência com o preço (ex: novo fundo no preço, mas não no oscilador)
-• Confirmação com candle técnico (pin bar, doji, engolfo)
+14. Sequência de Máximas Mais Baixas (≈60%)
+
+• 3 candles com máximas descendentes
+• Confirmação com candle de baixa forte
 
 ⸻
 
-16. Parabolic SAR com Confirmação de Direção — 60%
-• Pontos do SAR mudam de posição (abaixo → acima ou vice-versa)
-• Candle de entrada confirma a nova direção
-• Contexto favorável (volume, tendência maior)
+15. Falha de Continuação Após Rompimento (≈61%)
+
+• Rompe resistência/suporte
+• Falha em fechar fora da zona e forma candle técnico de reversão
 
 ⸻
 
-17. Volume Clímax + Reversão Técnica — 62%
-• Candle com volume extremamente alto em comparação com os 5 anteriores
-• Candle seguinte mostra reversão clara (engolfo, pin bar, etc.)
+16. Marubozu Após Candle de Indecisão (≈59%)
+
+• Candle pequeno (Doji ou Spinning Top)
+• Seguinte é Marubozu com corpo ≥ 90% do range
 
 ⸻
 
-18. Gap de Fuga com Continuação de Tendência — 64%
-• Gap aparece na direção da tendência atual
-• Candle seguinte não fecha o gap e continua a direção
-• Volume crescente ou igual ao candle de gap
+17. Rejeição com Sombra Superior Longa (≈57%)
+
+• Sombra superior ≥ 2× corpo
+• Fechamento abaixo da metade
 
 ⸻
 
-19. Estrela da Manhã / Estrela da Noite — 57%
-• Três candles consecutivos:
-	•	1º = forte (baixa ou alta)
-	•	2º = candle pequeno (gap)
-	•	3º = candle forte em direção contrária
-• Gap claro entre o 1º e o 2º candle
+18. Rejeição com Sombra Inferior Longa (≈57%)
+
+• Sombra inferior ≥ 2× corpo
+• Fechamento acima da metade
 
 ⸻
 
-20. Marubozu com Volume e Continuação — 56%
-• Corpo ≥ 90% do range
-• Sem sombras ou sombras muito pequenas
-• Volume superior à média dos últimos 3 candles
+19. Reversão Após Terceiro Toque na Mesma Zona (≈66%)
 
+• Zona tocada 3 vezes (±0.1%)
+• Candle técnico no terceiro toque (Pin Bar ou Engolfo)
 
 ⸻
 
-📌 Regras para cada padrão:
-	•	Use apenas cálculos baseados nos valores open, high, low, close
-	•	Simule proporções com:
-• corpo = |close − open|
-• sombra sup. = |high − max(open, close)|
-• sombra inf. = |min(open, close) − low|
-	•	NÃO use interpretação visual
-	•	Valide o padrão apenas se os valores batem com as proporções exigidas
+20. Rompimento com Pullback e Continuação (≈64%)
+
+• Rompe suporte/resistência
+• Retorna (pullback) à zona rompida
+• Forma candle técnico de continuação
+
+⸻
+
+📌 Todas as estratégias devem ser validadas com:
+	•	Cálculo de proporção exata entre corpo e sombras (OHLC)
+	•	Validação da zona de suporte/resistência por repetição (≥ 2 ou 3 toques)
+	•	Candle de entrada apenas no mais recente do M1
+	•	Contexto maior favorável (D1, H4, H1)
+
 
 👉 Use essas taxas como base inicial e **ajuste conforme o contexto real**.  
 Exemplo: Engolfo com tendência forte e volume crescente = 60% → ajusta para 68%.
