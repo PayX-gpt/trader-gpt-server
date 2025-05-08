@@ -314,7 +314,7 @@ Se NÃO houver entrada válida:
   "entrada": 1.23456,
   "stop": 1.22890,
   "gain": 1.24120,
-  "probabilidade": 62
+  "probabilidade": 62,
   "motivo":
 }
 
