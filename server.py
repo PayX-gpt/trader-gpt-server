@@ -322,7 +322,7 @@ Se NÃO houver entrada válida:
 • 1 = COMPRA  
 • 2 = VENDA  
 Nunca use texto no lugar de número, exceto quando **explicitamente não houver entrada válida**.
-Se e apenas se não setup = SEM ENTRADA VÁLIDA, explique o motivo
+Se e apenas se não setup = SEM ENTRADA VÁLIDA, explique o motivo e especifique qual regra descumprida ou quais regras descumprida.
 ---
 
 📛 PROIBIÇÕES ABSOLUTAS:
