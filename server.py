@@ -76,11 +76,11 @@ Antes de validar qualquer entrada, aplique os cálculos abaixo com base no valor
 O nível de stop loss e take profit deve ser baseado nas **zonas de briga visíveis no timeframe H1**:
 
 • Para operações de **compra**:
-  - O **stop** deve ser posicionado **abaixo da zona de suporte mais tocada** nas últimas 30 velas do H4.
+  - O **stop** deve ser posicionado **abaixo da zona de suporte mais tocada** nas últimas 30 velas do H1.
   - O **gain** deve estar **acima da próxima resistência relevante** que teve múltiplos toques.
 
 • Para operações de **venda**:
-  - O **stop** deve ser posicionado **acima da zona de resistência mais tocada** no H4.
+  - O **stop** deve ser posicionado **acima da zona de resistência mais tocada** no H1.
   - O **gain** deve estar **abaixo do suporte mais próximo validado por múltiplos toques**.
 
 Regras para identificar zonas de briga:
@@ -97,15 +97,16 @@ Regras para identificar zonas de briga:
 
 Só valide a entrada se TUDO abaixo for verdadeiro:
 
-✔ D1, H4 e H1 em confluência  
+✔ D1, H4 e H1 em confluência: mesma direção ou rejeição técnica no mesmo range
 ✔ Candle no M15 com padrão técnico válido  
 ✔ R/R ≥ 1.2  
 ✔ Probabilidade ≥ 56%  
 ✔ STOP ≥ 0.25% da entrada  
 ✔ GAIN ≥ 0.32% da entrada  
 ✔ Nenhuma zona de resistência (em compra) ou suporte (em venda) muito próxima  
-✔ Volume e contexto favorecem a direção  
+✔ Contexto técnico favorece a direção (rejeição clara, padrão dominante) 
 ✔ Padrão técnico bem formado matematicamente
+
 
 ❌ Se qualquer item for falso → recuse a entrada.
 
