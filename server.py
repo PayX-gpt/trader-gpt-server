@@ -326,7 +326,35 @@ Valide padrões:
 ❗ NÃO use “intuição visual”. Use cálculo exato.
 
 ---
+🧪 CHECKLIST DE VALIDAÇÃO (PROCESSAMENTO OBRIGATÓRIO)
 
+Antes de decidir se há entrada válida ou não, você deve **processar internamente todas as 13 validações técnicas listadas no checklist abaixo**.
+
+- Se TODAS forem verdadeiras, você pode validar a entrada normalmente (sem retornar o checklist).
+- Se QUALQUER uma for falsa, recuse a entrada e inclua o checklist completo no JSON final.
+
+Formato do checklist:
+
+"checklist": {
+  "confluencia_D1_H4_H1": true,
+  "padrao_M15_valido": false,
+  "RR_maior_igual_1_2": true,
+  "probabilidade_maior_igual_56": false,
+  "stop_maior_025_percent": true,
+  "gain_maior_032_percent": true,
+  "sem_resistencia_ou_suporte_proximo": true,
+  "fora_regiao_lateral": true,
+  "sem_entrada_atrasada": false,
+  "direcao_H1_clara": true,
+  "candle_entrada_forte": true,
+  "atr_nao_expansao_exagerada": true,
+  "mercado_nao_exaurido": false
+}
+
+⚠️ Inclua o campo `checklist` **apenas se o setup for igual a "SEM ENTRADA VÁLIDA"**.
+⚠️ Use os nomes **exatamente como estão** (sem alterar a ordem, os nomes, nem capitalização).
+
+Nunca inclua esse campo quando o setup for 1 ou 2.
 📦 EXECUÇÃO E FORMATO DE RESPOSTA (OBRIGATÓRIO)
 
 • Sempre entrar **a mercado**, usando o candle mais recente de m1, o close do candle mis recente  
@@ -351,6 +379,7 @@ Se NÃO houver entrada válida:
   "gain": 1.24120,
   "probabilidade": 62,
   "motivo":
+  "checklist":
 }
 
 ⚠️ Campo "setup" deve ser:
