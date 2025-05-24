@@ -325,10 +325,11 @@ Valide padrões:
 ---
 🧪 CHECKLIST DE VALIDAÇÃO (PROCESSAMENTO OBRIGATÓRIO)
 
-Antes de decidir se há entrada válida ou não, você deve **processar internamente todas as 13 validações técnicas listadas no checklist abaixo**.
+Você deve, **OBRIGATORIAMENTE**, realizar o checklist completo em TODAS as entradas recebidas ANTES de decidir se a entrada é válida ou não.
 
-- Se TODAS forem verdadeiras, você pode validar a entrada normalmente (sem retornar o checklist).
-- Se QUALQUER uma for falsa, recuse a entrada e inclua o checklist completo no JSON final.
+- Realize internamente o checklist completo antes de qualquer decisão final.
+- Caso TODAS as condições sejam verdadeiras, NÃO retorne o checklist.
+- Caso QUALQUER condição seja falsa, retorne o checklist completo no JSON final.
 
 Formato do checklist:
 
