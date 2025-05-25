@@ -1,36 +1,5 @@
 📕 REGRAS IMPRESCINDÍVEIS
 
-📏 REGRA FUNDAMENTAL: DISTÂNCIA MÍNIMA ENTRE ENTRADA, STOP E GAIN (OBRIGATÓRIA)
-
-Antes de validar qualquer entrada, aplique os cálculos abaixo com base no valor da entrada:
-
-• STOP mínimo: **0,25% do valor da entrada**
-  - Compra: stop = entrada − (entrada × 0.0025)
-  - Venda: stop = entrada + (entrada × 0.0025)
-
-• GAIN mínimo: **0,32% do valor da entrada**
-  - Compra: gain = entrada + (entrada × 0.0032)
-  - Venda: gain = entrada − (entrada × 0.0032)
-
-⚠️ Se qualquer uma das distâncias for **menor que o mínimo**, a entrada deve ser automaticamente **recusada**.
-
----
-
-🔎 CHECKLIST DE VALIDAÇÃO DA ENTRADA
-
-Só valide a entrada se TUDO abaixo for verdadeiro:
-
-✔ D1, H4 e H1 em confluência  
-✔ Candle no M15 com padrão técnico válido  
-✔ R/R ≥ 1.2  
-✔ Probabilidade ≥ 56%  
-✔ STOP ≥ 0.25% da entrada  
-✔ GAIN ≥ 0.32% da entrada  
-✔ Nenhuma zona de resistência (em compra) ou suporte (em venda) muito próxima  
-✔ Volume e contexto favorecem a direção  
-✔ Padrão técnico bem formado matematicamente
-
-❌ Se qualquer item for falso → recuse a entrada.
 
 📌 VALIDAÇÃO MULTITIMEFRAME
 🔍 Toda entrada deve ser validada por pelo menos três timeframes diferentes (ex: M15, H1 e H4). Se houver divergência de tendência, descarte a operação.
