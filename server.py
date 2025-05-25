@@ -334,14 +334,22 @@ def analise():
             try:
                 json_obj = json.loads(json_limpo)
 
-                # ✅ Corrige o setup para número real
-                setup_raw = str(json_obj.get("setup", "")).strip().lower()
-                if setup_raw in ["1", "compra"]:
-                    json_obj["setup"] = 1
-                elif setup_raw in ["2", "venda"]:
-                    json_obj["setup"] = 2
-                else:
-                    return Response(json.dumps({"erro": f"Setup inválido recebido: {setup_raw}"}), status=400, mimetype="application/json")
+# ✅ Corrige o setup para número real ou reconhece ausência de entrada
+setup_raw = str(json_obj.get("setup", "")).strip().lower()
+
+if setup_raw in ["1", "compra"]:
+    json_obj["setup"] = 1
+elif setup_raw in ["2", "venda"]:
+    json_obj["setup"] = 2
+elif setup_raw == "sem entrada válida":
+    json_obj["setup"] = "SEM ENTRADA VÁLIDA"
+else:
+    return Response(json.dumps({"erro": f"Setup inválido recebido: {setup_raw}"}), status=400, mimetype="application/json")
+
+# ✅ Log completo do retorno (opcional, mas útil para debug)
+print("✔️ JSON final retornado ao MQL5:", json.dumps(json_obj, ensure_ascii=False, indent=2))
+
+return Response(json.dumps(json_obj), status=200, mimetype="application/json")
 
                 return Response(json.dumps(json_obj), status=200, mimetype="application/json")
 
