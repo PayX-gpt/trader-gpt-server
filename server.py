@@ -14,8 +14,6 @@ with open("memoria_trader.txt", "r", encoding="utf-8") as f:
 # 🔧 Prompt base com instrução para retorno numérico de setup
 
 PROMPT = """
-🧠 TRADER GPT — DECISÃO TÉCNICA FINAL
-
 
 🧠 MEMÓRIA DO TRADER GPT — VERSÃO 3.5 OTIMIZADA
 
@@ -86,7 +84,7 @@ Não use suposições visuais. Toda análise deve ser matemática, objetiva e ba
 - Ignore padrão técnico se houver 3 ou mais candles anteriores com corpo < 25% (região lateral)
 ---
 
-⚠️ As validações técnicas básicas já foram feitas. Sua única responsabilidade agora é avaliar a **estrutura do mercado** e tomar uma decisão assertiva, com base:
+⚠️ As validações técnicas básicas já foram feitas. Sua única responsabilidade agora é avaliar a **estrutura do mercado** e tomar uma decisão assertiva escolhendo bem a "entrada" o "stop" e o "gain", com base:
 
 - Padrões de reversão ou continuação
 - Zonas de suporte/resistência e rejeição
