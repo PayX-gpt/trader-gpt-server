@@ -310,6 +310,28 @@ Seu papel é encontrar o padrão e **ajustar os pontos numéricos** para garanti
 
 ---
 
+
+📏 REGRAS MATEMÁTICAS OBRIGATÓRIAS PARA ENTRADA SER VÁLIDA:
+
+✔ O stop deve ser **no mínimo 0.25%** do valor da entrada  
+✔ O gain deve ser **no mínimo 0.32%** do valor da entrada  
+✔ O risco/retorno (RR) deve ser **≥ 1.3**  
+
+⚠️ Antes de montar o JSON final, **calcule as distâncias** da entrada para o stop e do gain.  
+Se algum valor estiver abaixo, **ajuste os pontos** respeitando a lógica técnica.  
+
+📌 Exemplo:
+
+- Se entrada = 1.20000  
+  ➤ STOP mínimo = 1.19700 (distância ≥ 0.003 = 0.25%)  
+  ➤ GAIN mínimo = 1.20384 (distância ≥ 0.00384 = 0.32%)  
+  ➤ RR = (gain - entrada) ÷ (entrada - stop) ≥ 1.3  
+
+---
+
+⚠️ Se encontrar um padrão técnico, **nunca rejeite a entrada por não atingir os limites**.  
+Ajuste os valores para que o MQL5 aceite o trade. Isso é obrigatório.
+
 ---
 
 DADOS:
