@@ -284,7 +284,7 @@ Se houver entrada válida:
 • GAIN ≥ 0.32% do valor de entrada
 • R/R ≥ 1.3
 
-✔ Se necessário, ajuste o candle de entrada levemente para alcançar esses requisitos sem perder a coerência com o padrão técnico detectado.
+✔ Se necessário, ajuste os pontos de stop e gain para alcançar esses requisitos sem perder a coerência com o padrão técnico detectado.
 
 ✔ Se identificar um padrão técnico válido, **nunca rejeite** a entrada por distância. Corrija os pontos.
 
