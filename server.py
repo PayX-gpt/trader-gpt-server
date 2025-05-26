@@ -262,23 +262,12 @@ Se houver entrada válida:
   "probabilidade": 62
 }
 
-Se NÃO houver entrada válida:
-{
-  "setup": "SEM ENTRADA VÁLIDA",
-  "entrada": 1.23456,
-  "stop": 1.22890,
-  "gain": 1.24120,
-  "probabilidade": 62,
-  "motivo": "",
-  "checklist": {}
-}
 
 
 ⚠️ Campo "setup" deve ser:
 • 1 = COMPRA  
 • 2 = VENDA  
-Nunca use texto no lugar de número, exceto quando **explicitamente não houver entrada válida**.
-Se e apenas se não setup = SEM ENTRADA VÁLIDA, explique o motivo e especifique qual regra descumprida ou quais regras descumprida.
+⚠️ Campo "stop" e campo "gain" sempre deve ser fornecido por você de acordo com a analise dos dados OHLC
 ---
 
 📛 PROIBIÇÕES ABSOLUTAS:
