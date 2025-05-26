@@ -287,7 +287,6 @@ Se e apenas se não setup = SEM ENTRADA VÁLIDA, explique o motivo e especifique
 🚫 NÃO explique  
 🚫 NÃO use linguagem natural  
 🚫 NÃO arredonde os valores  
-🚫 NÃO valide entradas com SL ou TP abaixo dos percentuais mínimos
 
 ---
 
