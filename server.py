@@ -248,24 +248,44 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 • Forma candle técnico de continuação
 
 ---
-🧠 VALIDAÇÕES ANTES DE GERAR A RESPOSTA
 
-⚠️ Execute os seguintes cálculos ANTES de gerar o JSON:
 
-1. Calcule a distância percentual entre ENTRADA e STOP:  
-   distância_stop = |entrada - stop| / entrada × 100
+🧠 AJUSTES OBRIGATÓRIOS PARA CONFORMIDADE MQL5
+Você só pode retornar uma entrada se TODAS as condições abaixo forem atendidas com base nos dados:
 
-2. Calcule a distância percentual entre GAIN e ENTRADA:  
-   distância_gain = |gain - entrada| / entrada × 100
+REGRAS MQL5 OBRIGATÓRIAS (NÃO NEGOCIÁVEIS):
+	1.	STOP mínimo obrigatório = 0.25% do valor da entrada
+	2.	GAIN mínimo obrigatório = 0.32% do valor da entrada
+	3.	R/R obrigatório ≥ 1.3
 
-3. Calcule o R/R:  
-   rr = |gain - entrada| / |entrada - stop|
+Se qualquer uma dessas regras não for atendida, a entrada será rejeitada.
 
-⚠️ Requisitos obrigatórios:
+⸻
 
-• distância_stop ≥ 0.25%  
-• distância_gain ≥ 0.32%  
-• rr ≥ 1.3  
+COMPORTAMENTO OBRIGATÓRIO PARA EVITAR REJEIÇÃO PELO MQL5:
+	•	Antes de gerar a resposta, verifique numericamente se os pontos de entrada, stop e gain respeitam as regras acima.
+	•	Se necessário, ajuste os valores de stop e gain mantendo coerência com os candles recentes (últimos 20 do M15 e H1).
+	•	Sempre selecione candles com estrutura clara, que permitam stop técnico suficiente (ex: sombras longas, corpo forte, rompimentos amplos, etc.).
+	•	Prefira padrões com volatilidade suficiente para entregar distância real de preço.
+	•	Nunca envie proposta com RR abaixo de 1.3 ou distâncias absolutas menores que os mínimos.
+
+⸻
+
+IMPORTANTE:
+
+Se identificar um padrão técnico válido mas os valores estiverem fora da faixa mínima, você deve:
+	•	Corrigir os valores proporcionalmente.
+	•	Estender a zona de gain e stop respeitando a lógica do candle.
+	•	Nunca rejeitar a entrada sem antes tentar ajustar para os mínimos exigidos.
+
+⸻
+
+EXEMPLO DE CÁLCULO ESPERADO ANTES DE ENVIAR A RESPOSTA:  
+
+entrada = 1.23456  
+stop = 1.23145 → distância = 0.00311 → ok (≥ 0.25%)  
+gain = 1.23950 → distância = 0.00494 → ok (≥ 0.32%)  
+RR = 0.00494 / 0.00311 = 1.59 → válido  
 
 ❌ Se qualquer um desses critérios falhar, **NÃO gere a resposta.**  
 🔁 Em vez disso, **ajuste os valores de stop ou gain** mantendo coerência com o padrão técnico detectado, até atender todos os critérios.
