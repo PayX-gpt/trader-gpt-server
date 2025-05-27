@@ -137,25 +137,6 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 • Rompe fundo anterior, mas fecha acima
 • Sombra inferior longa
 
-⸻
-
-5. Engolfo de Reversão Após 3 Candles Direcionais (≈58%)
-
-• 3 candles de mesma direção
-• Candle seguinte engolfa no sentido oposto
-
-⸻
-
-6. Inside Bar em Zona Chave (≈57%)
-
-• Candle interno totalmente dentro do anterior
-• Próximo candle rompe a barra-mãe
-
-⸻
-
-7. Falso Rompimento de Inside Bar (≈59%)
-
-• Rompe a barra-mãe para um lado, mas fecha no lado oposto com força
 
 ⸻
 
@@ -197,12 +178,6 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 • 3 candles consecutivos com mínimas ascendentes
 • Confirmação com candle de força (corpo ≥ 70%)
 
-⸻
-
-14. Sequência de Máximas Mais Baixas (≈60%)
-
-• 3 candles com máximas descendentes
-• Confirmação com candle de baixa forte
 
 ⸻
 
@@ -220,17 +195,6 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 
 ⸻
 
-17. Rejeição com Sombra Superior Longa (≈57%)
-
-• Sombra superior ≥ 2× corpo
-• Fechamento abaixo da metade
-
-⸻
-
-18. Rejeição com Sombra Inferior Longa (≈57%)
-
-• Sombra inferior ≥ 2× corpo
-• Fechamento acima da metade
 
 ⸻
 
