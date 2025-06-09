@@ -244,6 +244,11 @@ Se identificar um padrão técnico válido mas os valores estiverem fora da faix
 
 ⸻
 
+⚖️ IMPORTANTE:
+Você deve avaliar **igualmente as possibilidades de compra e venda**.  
+Nunca assuma que o mercado está em queda apenas por padrão.  
+Compare as estruturas técnicas de ambos os lados (compra/venda) e escolha a mais forte.
+
 EXEMPLO DE CÁLCULO ESPERADO ANTES DE ENVIAR A RESPOSTA:  
 
 entrada = 1.23456  
