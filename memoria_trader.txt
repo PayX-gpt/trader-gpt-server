@@ -6,6 +6,3 @@
 
 📌 EVITAR ZONAS DE INDECISÃO
 🚫 Não envie operações se o candle anterior for um doji ou apresentar corpo muito pequeno (indicação de indecisão). Evite operar dentro de zonas de consolidação.
-
-📌 ZONAS DE ENTRADA ESTRATÉGICAS
-📉 Em operações de venda, a entrada deve estar posicionada logo abaixo de uma resistência visível. Em operações de compra, logo acima de um suporte técnico claro. Nunca posicione dentro da zona de briga.
