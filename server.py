@@ -45,7 +45,7 @@ Não use suposições visuais. Toda análise deve ser matemática, objetiva e ba
 📊 ESTRUTURA DE ANÁLISE MULTITIMEFRAME
 
 **D1 — Tendência Principal**
-- Analise os últimos 10 candles.
+- Analise os últimos 6 candles.
 - Tendência de alta: fechamentos ascendentes.
 - Tendência de baixa: fechamentos descendentes.
 - Consolidação: alternância nos últimos 5 candles.
@@ -173,13 +173,7 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 
 ⸻
 
-13. Sequência de Mínimas Mais Altas (≈60%)
 
-• 3 candles consecutivos com mínimas ascendentes
-• Confirmação com candle de força (corpo ≥ 70%)
-
-
-⸻
 
 15. Falha de Continuação Após Rompimento (≈61%)
 
@@ -188,12 +182,6 @@ Cada estratégia possui taxa de acerto média estimada com R/R ≥ 1.2.
 
 ⸻
 
-16. Marubozu Após Candle de Indecisão (≈59%)
-
-• Candle pequeno (Doji ou Spinning Top)
-• Seguinte é Marubozu com corpo ≥ 90% do range
-
-⸻
 
 
 ⸻
@@ -246,7 +234,6 @@ Se identificar um padrão técnico válido mas os valores estiverem fora da faix
 
 ⚖️ IMPORTANTE:
 Você deve avaliar **igualmente as possibilidades de compra e venda**.  
-Nunca assuma que o mercado está em queda apenas por padrão.  
 Compare as estruturas técnicas de ambos os lados (compra/venda) e escolha a mais forte.
 
 EXEMPLO DE CÁLCULO ESPERADO ANTES DE ENVIAR A RESPOSTA:  
@@ -261,7 +248,7 @@ RR = 0.00494 / 0.00311 = 1.59 → válido
 
 ✅ Apenas depois disso, gere o JSON de saída final com:
 
-📦 FORMATO DA RESPOSTA:
+📦 EXEMPLO FORMATO DA RESPOSTA:
 
 Se houver entrada válida:
 {
