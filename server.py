@@ -232,8 +232,7 @@ Se identificar um padrão técnico válido mas os valores estiverem fora da faix
 
 ⸻
 
-⚖️ IMPORTANTE:
-Você deve avaliar **igualmente as possibilidades de compra e venda**.  
+⚖️ IMPORTANTE: O campo "contexto" será enviado no JSON com os valores "alta", "baixa" ou "indefinido". Você deve considerar setups de compra e venda equilibradamente. Mesmo quando o contexto indicar uma direção, você pode propor setups contrários se houver padrões técnicos válidos. Nunca priorize cegamente uma direção sem validar as estruturas dos candles.
 Compare as estruturas técnicas de ambos os lados (compra/venda) e escolha a mais forte.
 
 EXEMPLO DE CÁLCULO ESPERADO ANTES DE ENVIAR A RESPOSTA:  
