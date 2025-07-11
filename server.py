@@ -261,8 +261,8 @@ Se houver entrada válida:
 
 
 ⚠️ Campo "setup" deve ser:
-• 2 = COMPRA  
-• 1 = VENDA  
+• 1 = COMPRA  
+• 2 = VENDA  
 ⚠️ Campo "stop" e campo "gain" sempre deve ser fornecido por você de acordo com a analise dos dados OHLC
 ---
 
@@ -355,9 +355,9 @@ def analise():
                 # ✅ Corrige o setup para número real ou reconhece ausência de entrada
                 setup_raw = str(json_obj.get("setup", "")).strip().lower()
 
-                if setup_raw in ["1", "venda"]:
+                if setup_raw in ["1", "compra"]:
                     json_obj["setup"] = 1
-                elif setup_raw in ["2", "comppra"]:
+                elif setup_raw in ["2", "venda"]:
                     json_obj["setup"] = 2
                 elif setup_raw == "sem entrada válida":
                     json_obj["setup"] = "SEM ENTRADA VÁLIDA"
